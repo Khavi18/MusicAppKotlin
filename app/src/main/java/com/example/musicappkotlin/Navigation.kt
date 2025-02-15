@@ -9,6 +9,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.musicappkotlin.ui.theme.AccountView
+import com.example.musicappkotlin.ui.theme.BrowseView
+import com.example.musicappkotlin.ui.theme.HomeView
+import com.example.musicappkotlin.ui.theme.LibraryView
 import com.example.musicappkotlin.ui.theme.SubscriptionView
 
 @Composable
@@ -20,6 +23,18 @@ fun Navigation(navController: NavController, viewModel: MainViewModel, pd: Paddi
         }
         composable(Screen.DrawerScreen.Subscription.route) {
             SubscriptionView()
+        }
+
+        composable(Screen.BottomScreen.Home.route) {
+            HomeView()
+        }
+
+        composable(Screen.BottomScreen.Browse.route) {
+            BrowseView()
+        }
+
+        composable(Screen.BottomScreen.Library.route) {
+            LibraryView()
         }
     }
 }
